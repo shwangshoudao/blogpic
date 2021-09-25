@@ -80,6 +80,7 @@ def compress_photo():
     if directory_exists(des_dir):
         if not directory_exists(des_dir):
             make_directory(des_dir)
+        
         file_list_des = list_img_file(des_dir)
         # print file_list
     '''如果已经压缩了，就不再压缩'''
@@ -133,7 +134,7 @@ def handle_photo():
 
     list_info = SortDict(list_info)
     final_dict = {"list": list_info}
-    with open("D:/test/blog/source/photos/data.json", "w") as fp:
+    with open("/Users/shoudao/hexo/blog/source/photos/data.json", "w") as fp:
         json.dump(final_dict, fp)
 
 
